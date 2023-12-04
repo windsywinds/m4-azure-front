@@ -10,7 +10,7 @@ export const DisplayCards = ({ userImage, data, displayMsg }) => {
     // Fetch car data from backend server as soon as the display cards are loaded so that the data can be used to match
     const fetchCarData = async () => {
       try {
-        const response = await fetch('http://localhost:8001/cardatabase');
+        const response = await fetch('https://mongoapim4.azurewebsites.net/cardatabase');
         const carDbData = await response.json();
         setCarDbData(carDbData);
       } catch (error) {

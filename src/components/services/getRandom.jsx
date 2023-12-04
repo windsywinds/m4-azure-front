@@ -3,7 +3,7 @@
 //stored location backend/data/randomUrls.cjs
 async function getRandom() {
     try {
-        const response = await fetch('http://localhost:8001/getrandom');
+        const response = await fetch('https://mongoapim4.azurewebsites.net/getrandom');
         const randomUrlData = await response.json();
         return randomUrlData;
       } catch (error) {
